@@ -6,9 +6,13 @@ AngularJS based mobile sportsbook application (POC).
 
 #Functionality
 
-- Add, delete and edit contacts.
-- The data is persisted on the client (local storage) and it's loaded again when the application starts.
-- Validation is applied to the different input fields.
+- Animated live game actions
+- Display different winner markets based on provided data via a service
+- Animated betslip
+- Adding/Removing odds to the betslip
+- Calculation of 'possible gain'
+- Keypad for easier betting on mobile devices
+- Responsiveness via Flexbox
 
 ## Install
 
