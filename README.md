@@ -1,2 +1,2 @@
-# mobile-sportsbook-app
-AngularJS based mobile sportsbook application (POC)
+# Mobile Sportsbook App
+AngularJS based mobile sportsbook application (POC).
