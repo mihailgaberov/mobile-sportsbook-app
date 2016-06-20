@@ -1,0 +1,255 @@
+#betslip {
+  background-color: $main-background-color;
+
+  .balance-msg {
+    color: $betslip-foreground-color;
+    font-size: .8em;
+    width: 80%;
+    display: block;
+    margin: 5% auto 0 auto;
+  }
+
+  #betTypesNav {
+    margin: 5% 0;
+
+    .tabs-nav {
+      border: 1px solid $main-foreground-color;
+      border-radius: 7px;
+      width: 90%;
+      margin: 0 auto;
+
+      .tab-nav {
+        -webkit-transform: skew(-1deg);
+        -moz-transform: skew(-1deg);
+        -ms-transform: skew(-1deg);
+        -o-transform: skew(-1deg);
+        height: 30px;
+        border-right: 1px solid $main-foreground-color;
+
+        a {
+          line-height: 33px;
+          height: 30px;
+          -webkit-transform: skew(-1deg);
+          -moz-transform: skew(-1deg);
+          -ms-transform: skew(-1deg);
+          -o-transform: skew(-1deg);
+        }
+
+        &:first-child {
+          background-color: $main-foreground-color;
+          border-bottom-left-radius: 4px;
+          border-top-left-radius: 4px;
+          a {
+            color: $main-background-color;
+          }
+        }
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+  }
+
+  #messages {
+    span {
+      width: 100%;
+      text-align: center;
+      font-size: .8em;
+      line-height: 30px;
+
+      &.info {
+        background-color: $info-msg-background-color;
+        color: black;
+      }
+
+      &.confirmation {
+        text-align: left;
+        background-color: $confirmation-msg-background-color;
+        color: #6f9349;
+        i {
+          margin-right: 2%;
+        }
+      }
+    }
+  }
+
+  #bets {
+    min-height: 200px;
+    .bet {
+      height: 53px;
+      border-bottom: 1px solid $place-bet-area-background-color;
+      ul {
+        display: flex;
+
+        li.bet-info-area {
+          color: $info-foreground-color;
+          font-size: .8em;
+          order: 1;
+          flex-grow: 2;
+          padding: 2% 5%;
+
+          .match-title {
+            width: 90%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .bet-info {
+            display: flex;
+
+            .market-name {
+              order: 1;
+              flex-grow: 2;
+            }
+
+            .bet-value {
+              order: 2;
+              float: right;
+            }
+          }
+        }
+
+        li.delete-bet-area {
+          order: 2;
+          background-color: $delete-bet-btn-background-color;
+          .delete-bet-btn {
+            width: 22px;
+            height: 52px;
+            vertical-align: middle;
+            text-align: center;
+            padding-top: 13px;
+            i {
+              font-size: 1.6em;
+              color: $main-background-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #keypad {
+    .close-keypad-btn {
+      width: 100%;
+      height: 30px;
+      background-color: $delete-bet-btn-background-color;
+      border: 1px solid $keypad-border-color;
+      font-size: .8em;
+      color: $info-foreground-color;
+    }
+
+    .bc-keypad {
+      background-color: $delete-bet-btn-background-color;
+    }
+
+    .bc-keypad__button {
+      border: 1px solid $keypad-border-color;
+      width: 33%;
+      color: $info-foreground-color;
+      font-size: .8em;
+
+      &::after {
+        background-color: transparent;
+      }
+    }
+
+    .bc-keypad__button:nth-of-type(10) {
+      margin-left: 0;
+    }
+
+    .bc-keypad__button:nth-of-type(12) {
+      margin-left: -4px;
+    }
+
+    .bc-keypad__button--backspace {
+      svg {
+        height: 25px;
+      }
+    }
+  }
+
+  #placeBetArea {
+    background-color: $place-bet-area-background-color;
+    color: $markets-foreground-color;
+
+    .bets-number {
+      display: flex;
+      font-size: .8em;
+      padding: 4%;
+      border-bottom: 1px solid $main-background-color;
+
+      .title {
+        order: 1;
+        flex-grow: 2;
+      }
+
+      .value {
+        order: 2;
+      }
+    }
+
+    .wager {
+      display: flex;
+      color: $main-foreground-color;
+      padding: 4%;
+      line-height: 27px;
+
+      .title {
+        order: 1;
+        flex-grow: 2;
+      }
+
+      .input {
+        order: 2;
+        input[type="text"] {
+          width: 120px;
+          height: 30px;
+          border-radius: 5px;
+          text-align: right;
+        }
+      }
+    }
+
+    .possible-gain {
+      display: flex;
+      color: $main-foreground-color;
+      padding: 0 4% 4% 4%;
+
+      .title {
+        order: 1;
+        flex-grow: 2;
+      }
+
+      .value {
+        order: 2;
+      }
+    }
+
+    .buttons {
+      border: 1px solid $main-background-color;
+      .button-group {
+        display: flex;
+        margin-bottom: 0;
+
+        .clear-btn {
+          a {
+            color: $markets-foreground-color;
+            background-color: $place-bet-area-background-color;
+          }
+        }
+
+        .place-bet-btn {
+          flex-grow: 2;
+          a {
+            background-color: #d0202e;
+            i {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

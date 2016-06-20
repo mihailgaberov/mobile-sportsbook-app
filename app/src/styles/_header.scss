@@ -1,0 +1,178 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  font-size: 12px;
+  font-family: Arial, sans-serif, Verdana;
+  width: auto;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body ul {
+  margin-left: 0;
+}
+
+body li {
+  list-style: none;
+}
+
+body img.pointLeft {
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+#accountInfoMenu {
+  height: 40px;
+  padding: 0;
+  background: $account-info-menu-background-color;
+}
+
+#accountInfoMenu li {
+  border-right: 1px solid $account-info-menu-item-border-color;
+}
+
+#sportTypeMenu {
+  background: $main-background-color;
+  padding: 0;
+  margin-top: -20px;
+}
+
+#sportTypeMenu li {
+  border-right: 1px solid $sport-type-menu-item-border-color;
+}
+
+#sportTypeMenu li a div {
+  text-align: left;
+}
+
+#sportTypeMenu li a div img {
+  margin-top: 13px;
+  height: 10px;
+}
+
+#subMenu {
+  background: $background-submenu-color;
+  padding: 0;
+  margin-top: -19px;
+}
+
+#subMenu li {
+  border-right: 1px solid $main-foreground-color;
+}
+
+.tabs-nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  color: $main-foreground-color;
+  font-size: 16px;
+}
+
+.tabs-nav#accountInfoMenu {
+  height: 50px;
+}
+
+.tabs-nav#accountInfoMenu li {
+  height: 50px;
+}
+
+.tabs-nav#accountInfoMenu li a {
+  line-height: 55px;
+}
+
+.tabs-nav#accountInfoMenu li a.betslip-btn {
+  img {
+    height: 20px;
+    width: 15px;
+    position: absolute;
+    top: 17px;
+    right: -6px;
+  }
+}
+
+
+.tabs-nav .tab-nav {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
+  height: 40px;
+  -webkit-transform: skew(-13.5deg);
+  -moz-transform: skew(-13.5deg);
+  -ms-transform: skew(-13.5deg);
+  -o-transform: skew(-13.5deg);
+}
+
+.tabs-nav .tab-nav.small-nav {
+  -webkit-box-flex: 0.5;
+  -webkit-flex: 0.5;
+  -ms-flex: 0.5;
+  flex: 0.5;
+}
+
+.tabs-nav .tab-nav.big-nav {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.tabs-nav .tab-nav.noborder {
+  border: none !important;
+}
+
+.tabs-nav .tab-nav a {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  width: 90%;
+  height: 46px;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 42px;
+  color: $main-foreground-color;
+  -webkit-transform: skew(13.5deg);
+  -moz-transform: skew(13.5deg);
+  -ms-transform: skew(13.5deg);
+  -o-transform: skew(13.5deg);
+}
+
+.tabs-nav .tab-nav a div img.left {
+  float: left;
+  width: 15px;
+  height: 20px;
+  margin-top: 17px;
+  padding-right: 5px;
+  margin-left: -4px;
+}
+
+.tabs-nav .tab-nav a div span.left {
+  float: left;
+  padding-left: 5px;
+}
+
+.tabs-nav .tab-nav a div img.nomargin {
+  margin-left: 0;
+}
+
+.tabs-nav .tab-nav a div img.right {
+  float: right;
+  width: 15px;
+  height: 20px;
+  margin-top: 17px;
+  padding-left: 5px;
+  margin-right: -6px;
+}
+
+.tabs-nav .tab-nav a div span.right {
+  float: right;
+  padding-right: 10px;
+}
+
+.tabs-nav .active {
+  color: $tabsnav-active-foreground-color;
+}

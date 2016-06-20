@@ -1,0 +1,12 @@
+<div id="liveActions">
+    <div class="team1">
+        <img class="left" ng-src="../img/live/{{ imageName }}" ng-if="isVisibleTeam1" />
+    </div>
+    <div class="team2">
+        <img class="right" ng-src="../img/live/{{ imageName }}" ng-if="isVisibleTeam2" />
+    </div>
+</div>
+<div id="liveActionInfo">
+    <div class="action-type">{{ lastAction }}</div>
+    <div class="team-name">{{ teamName }}</div>
+</div>

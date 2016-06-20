@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, minimal-ui">
+  <link rel="stylesheet" href="dist/styles/main.min.css"/>
+  <link rel="stylesheet" type="text/css" href="node_modules/foundation-apps/dist/css/foundation-apps.min.css" />
+  <link rel="stylesheet" type="text/css" href="node_modules/angular-keypad/dist/angular-keypad.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+</head>
+<body ng-app="tipicoMobileSportsbook" zf-esc-close zf-close-all>
+	<betslip></betslip>
+  <ul id="accountInfoMenu" class="tabs-nav">
+    <li class="tab-nav small-nav">
+      <a href="#">
+        <div>
+          <img class="left" src="../img/menu/menu-icon.svg" />
+          <img class="left nomargin" src="../img/menu/tipico-logo.svg" />
+        </div>
+      </a>
+    </li>
+    <li class="tab-nav"><a href="#"><div>My Account</div></a></li>
+    <li class="tab-nav"><a href="#"><div>My bets</div></a></li>
+    <li class="tab-nav noborder">
+      <a zf-toggle="betslip" class="betslip-btn">Betslip
+          <img class="right" src="../img/menu/menu-icon-blk.svg" />
+      </a>
+    </li>
+  </ul>
+  <ul id="sportTypeMenu" class="tabs-nav">
+    <li class="tab-nav small-nav">
+      <a href="#">
+        <div>
+          <img class="left pointLeft arrowed"
+          src="../img/menu/arrow-up-wht.svg" />
+          <span class="left">Back</span>
+        </div>
+      </a>
+    </li>
+    <li class="tab-nav big-nav noborder"><a href="#"><div>Live - Football</div></a></li>
+  </ul>
+  <ul id="subMenu" class="tabs-nav">
+    <li class="tab-nav">
+      <a href="#">
+        <div class="active">Odds</div>
+      </a>
+    </li>
+    <li class="tab-nav"><a href="#"><div>Live View</div></a></li>
+    <li class="tab-nav noborder"><a href="#"><div>Statistics</div></a></li>
+  </ul>
+
+  <section id="main-wrapper">
+    <div id="liveBetsArea" ng-view></div>
+
+    <div id="liveMarketsArea">
+      <live-markets></live-markets>
+    </div>
+  </section>
+
+  <script src="//code.angularjs.org/1.5.5/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+  <script src="//code.angularjs.org/1.5.5/angular-route.min.js"></script>
+  <script src="node_modules/foundation-apps/dist/js/foundation-apps.min.js"></script>
+
+	<script src="node_modules/angular-keypad/dist/angular-keypad.min.js"></script>
+
+  <script src="dist/scripts/main.js"></script>
+</body>
+</html>

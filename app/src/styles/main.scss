@@ -1,0 +1,10 @@
+@import '_variables';
+@import '_header';
+@import '_live-bets-area';
+@import '_live-markets-area';
+@import '_betslip';
+
+#main-wrapper {
+  position: relative;
+  top: -20px;
+}

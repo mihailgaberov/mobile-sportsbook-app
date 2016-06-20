@@ -1,0 +1,12 @@
+<section id="liveMarkets">
+	<div class="row-container" ng-repeat="market in markets">
+		<div class="title">{{ ::market.displayName }}</div>
+		<ul class="button-group segmented odds">
+			<li ng-repeat="odd in market.results">
+				<input type="radio" name="odds" value="{{ odd.value }}" id="{{ odd.id }}"
+							 ng-click="vm.addToBetslip(odd.id, odd.value, odd.name, market.displayName)"/>
+				<label for="{{ odd.id }}">{{ odd.name }} {{ odd.value }}</label>
+			</li>
+		</ul>
+	</div>
+</section>

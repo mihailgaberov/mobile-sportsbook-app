@@ -1,0 +1,67 @@
+<zf-offcanvas id="betslip" position="right" zf-swipe-close="right">
+	<span class="balance-msg">Your account balance is 325.50 €</span>
+
+	<section id="betTypesNav">
+		<ul class="tabs-nav">
+			<li class="tab-nav"><a href="#">Single</a></li>
+			<li class="tab-nav"><a href="#">
+				<div>Combi</div>
+			</a></li>
+			<li class="tab-nav"><a href="#">
+				<div>System</div>
+			</a></li>
+		</ul>
+	</section>
+	<section id="messages">
+		<span class="info label" ng-if="!visible && vm.arrBets.length == 0">Your bet slip is empty. Add bets first.</span>
+		<span class="confirmation label" ng-if="visible"><i class="fa fa-check-circle" aria-hidden="true"></i>Betslip submitted</span>
+	</section>
+	<section id="bets">
+		<div class="bet" ng-repeat="bet in vm.arrBets">
+			<ul>
+				<li class="bet-info-area">
+					<div class="match-title">{{ bet.matchTitle }}</div>
+					<div class="bet-info">
+						<span class="market-name">{{ bet.market }} {{ bet.name }}</span>
+						<span class="bet-value">{{ bet.value }}</span>
+					</div>
+				</li>
+				<li class="delete-bet-area">
+					<div class="delete-bet-btn" ng-click="vm.deleteBet($event, bet.id)">
+						<i class="fa fa-angle-right" aria-hidden="true"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="keypad">
+		<button class="close-keypad-btn" ng-click="vm.setKeypadVisibility($event, false)" ng-if="vm.isKeypadVisible == true">Close</button>
+		<button class="close-keypad-btn" ng-click="vm.setKeypadVisibility($event, true)" ng-if="vm.isKeypadVisible == false">Open</button>
+		<bc-keypad bc-number-model="vm.inputBetValue" bc-max-length="9" ng-show="vm.isKeypadVisible"></bc-keypad>
+	</section>
+	<section id="placeBetArea">
+		<div class="bets-number">
+			<div class="title">Number of bets</div>
+			<div class="value">{{ vm.betsNumber }}</div>
+		</div>
+		<div class="wager">
+			<div class="title">Wager</div>
+			<div class="input">
+				<form name="betslipForm">
+					<input type="text" name="bet-value" id="betValue" ng-model="vm.inputBetValue" />
+				</form>
+			</div>
+		</div>
+		<div class="possible-gain">
+			<div class="title">Possible gain</div>
+			<div class="value">{{ vm.possibleGain | number:2 }} €</div>
+		</div>
+		<div class="buttons">
+			<ul class="button-group expand">
+				<li class="clear-btn"><a href="#">CLEAR</a></li>
+				<li class="place-bet-btn"><a ng-click="visible=!visible">PLACE BET<i class="fa fa-chevron-right"
+																																						 aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</section>
+</zf-offcanvas>

@@ -1,0 +1,21 @@
+<section id="pitchLive">
+    <div class="arrow"></div>
+    <div id="matchInfo">
+        <ul class="time">
+            <li>{{ eventDetails.matchtime }}</li>
+            <li>LIVE</li>
+        </ul>
+        <ul class="teams">
+            <li>{{ ::eventDetails.team1 }}</li>
+            <li>{{ ::eventDetails.team2 }}</li>
+        </ul>
+        <ul class="score">
+            <li>3</li>
+            <li>1</li>
+        </ul>
+    </div>    
+</section>
+<div id="liveActionShow">
+        <live-action-show></live-action-show>
+</div>
+<live-action-info-bar event-data="::eventDetails"></live-action-info-bar>
