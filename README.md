@@ -21,12 +21,16 @@ Install NodeJS (nodejs.org)
 ```
 
 ```
-npm install in 'app' folder
+Install gulp (https://gulpjs.com)
+```
+
+```
+cd app && npm install
 ```
 
 ## Build
 ```
-gulp in 'app' folder
+gulp
 ```
 
 ## Watch
@@ -47,5 +51,5 @@ Load in the browser at http://localhost:9080/
 ## Run unit tests
 
 ```
-karma start in 'app' folder
+cd app && karma start
 ```
